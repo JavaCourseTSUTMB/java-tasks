@@ -13,7 +13,6 @@ class expTest {
         double scale = Math.pow(10, 3);
         double result = Math.ceil(y * scale) / scale;
         assertEquals(result, 2.843);
-
     }
 
     @Test
@@ -24,7 +23,6 @@ class expTest {
         y = taskOne.resolveExpression();
         boolean condRes = taskOne.isConditionExpression(5, y, r);
         assertFalse(condRes);
-
     }
 
     @Test
@@ -36,7 +34,6 @@ class expTest {
         double scale = Math.pow(10, 3);
         double result = Math.round(res * scale) / scale;
         assertEquals(result, -136.484);
-
     }
 
     @Test
@@ -60,6 +57,18 @@ class expTest {
         double scale = Math.pow(10, 3);
         double result = Math.round(res * scale) / scale;
         assertEquals(result, 0.503);
+    }
 
+    @Test
+    void testMethodN4() {
+        double n4;
+        n4 = 5;
+        taskThree taskThree =  new taskThree();
+        double res = Math.round(taskThree.findDepth(n4));
+
+        assertEquals(res, 106);
+        res = Math.round(taskThree.findDepth(10));
+
+        assertEquals(res, 375);
     }
 }

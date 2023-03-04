@@ -7,9 +7,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        double x, y, r;
-        r = 5;
-        x = in.nextDouble();
+//        double x, y, r;
+//        r = 5;
+//        x = in.nextDouble();
 //        taskOne taskOne = new taskOne(x);
 //        y = taskOne.resolveExpression();
 //        boolean condRes = taskOne.isConditionExpression(x, y, r);
@@ -23,9 +23,14 @@ public class Main {
 //
 //        }
 
-        taskTwo taskTwo =  new taskTwo(x);
-        double result = taskTwo.isConditions();
-        System.out.println(result);
+//        taskTwo taskTwo =  new taskTwo(x);
+//        double result = taskTwo.isConditions();
+        System.out.println("Введите время падения камня: ");
+        double t = in.nextDouble();
+        taskThree taskThree = new taskThree();
+        double res = taskThree.findDepth(t);
+        System.out.println("Ширина злополучного колодца = " + Math.round(res) + " м.");
+        System.out.printf("Ширина злополучного колодца = %d  м.", Math.round(res));
 
     }
 }
